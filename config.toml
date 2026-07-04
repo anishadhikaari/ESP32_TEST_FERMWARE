@@ -1,9 +1,10 @@
+esp_toml_version = 1.0
+
+firmware_images_url = "https://raw.githubusercontent.com/anishadhikaari/ESP32_TEST_FERMWARE/main/"
+
 supported_apps = ["my_secret_app"]
 
-[app:my_secret_app]
-name = "Anishs Secret Firmware"
-chipset = "ESP32"
-
-[[app:my_secret_app.images]]
-address = "0x0"
-path = "https://raw.githubusercontent.com/anishadhikaari/ESP32_TEST_FERMWARE/main/FOTA_GIT_ANI.ino.bin"
+[my_secret_app]
+chipsets = ["ESP32"]
+image.esp32 = "FOTA_GIT_ANI.merged.bin"
+description = "Anishs Secret Firmware"
